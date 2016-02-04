@@ -25,6 +25,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	width: 992px;
+	margin: 0 auto;
 }
 ol, ul {
 	list-style: none;
@@ -40,4 +42,36 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* Main */
+article {
+    display: block;
+    overflow-y: auto;
+}
+
+/* Article */
+.post {
+    display: inline-block;
+}
+
+/* Article & Aside pictures */
+.user, .sophie {
+    display: inline-block;
+    float: left;
+}
+
+.user {
+    clear: left;
+}
+
+.sophie {
+    width: 200px;
+}
+
+/* Aside */
+
+.welcome {
+    display: block;
+    position: fixed;
 }
