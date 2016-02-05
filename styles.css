@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	width: 992px;
+	margin: 0 auto;
 }
 
 ol, ul {
@@ -169,4 +171,70 @@ table {
 #body {
 	width: 992px;
 	height: auto;
+}
+
+/*----------------------------------------------------------------------------------------
+									Main
+----------------------------------------------------------------------------------------*/                                                                                                                             
+/*----------------------------------------------------------------------------------------
+									Article text
+----------------------------------------------------------------------------------------*/ 
+#article { 
+	width: 75%;
+	background-color: #e8e8e8;
+    border-radius: 10px;
+    display: block;
+	overflow-y: auto;
+	float: left;
+
+}
+.post, .notable_user {
+	display: inline-block;
+}
+
+.post {
+	margin: 25px;
+	background-color: white;
+}
+
+/*----------------------------------------------------------------------------------------
+									Article & Aside pictures
+----------------------------------------------------------------------------------------*/ 
+.article_img, .sophie {
+	display: inline-block;
+	float: left;
+}
+
+.article_img {
+	clear: left;
+}
+
+.sophie {
+	width: 200px;
+}
+
+.aside_img {
+	display: block;
+}
+
+/*----------------------------------------------------------------------------------------
+									Aside text
+----------------------------------------------------------------------------------------*/ 
+#aside {
+	width: 25%;
+	background-color: #BFD1E0;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: black;
+	float: left;
+}
+
+/*----------------------------------------------------------------------------------------
+									Footer
+----------------------------------------------------------------------------------------*/ 
+.welcome {
+	display: block;
+	position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
