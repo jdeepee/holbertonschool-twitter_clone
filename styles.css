@@ -1,0 +1,240 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	width: 992px;
+	margin: 0 auto;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------------------------------------------------------------------------------
+									nav-bar
+----------------------------------------------------------------------------------------*/
+
+.nav{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.nav li{
+    display:inline;
+    float: center;
+}
+
+.nav a{
+    display:inline-block;
+    padding:10px;
+}
+
+#nav-div {
+	position: relative;
+	width: auto;
+	top: 90%; left: 100%;
+  	transform: translate(-100%,-100%);
+	text-align: center;
+	float: center;
+}
+
+#nav-buttons {
+	border:1px solid #fff;
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, orange); /* Standard syntax */
+    -o-transition: all 1s ease-in-out;
+  	-ms-transition: all 1s ease-in-out;
+  	-moz-transition: all 1s ease-in-out;
+  	-webkit-transition: all 1s ease-in-out;
+  	transition: all 1s ease-in-out;
+}
+
+#nav-buttons:hover {
+	background: orange; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(orange, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(orange, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(orange, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(orange, red); /* Standard syntax */
+}
+
+/*----------------------------------------------------------------------------------------
+									login-bar
+----------------------------------------------------------------------------------------*/
+
+#login {
+	float: right;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: -40%; 
+}
+
+#edit_log {
+	border-bottom:1px solid #fff;
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, orange); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, orange); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(red, orange); /* Standard syntax */
+}
+
+#edit_log:hover {
+	background-color: green;
+}
+
+
+/*----------------------------------------------------------------------------------------
+									header
+----------------------------------------------------------------------------------------*/
+
+#header {
+	background-color: black;
+    color: white;
+    width: 992px;
+    height: 100px;
+}
+
+#container-header {
+	background-image: url(header-image.jpg);
+	width: 992px;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	display: block; 
+	clear: both;
+	overflow: hidden;
+}
+
+
+#image-div {
+	height: 70px;
+	width: 70px;
+	float: left;
+	position: relative;
+}
+
+#tagline {
+	position: relative;
+	top: 80%; right: 7%;
+}
+
+#image {
+	height: 70px;
+	width: 70px;
+}
+
+#body {
+	width: 992px;
+	height: auto;
+}
+
+/*----------------------------------------------------------------------------------------
+									Main
+----------------------------------------------------------------------------------------*/                                                                                                                             
+/*----------------------------------------------------------------------------------------
+									Article text
+----------------------------------------------------------------------------------------*/ 
+#article { 
+	width: 75%;
+	background-color: #e8e8e8;
+    border-radius: 10px;
+    display: block;
+	overflow-y: auto;
+	float: left;
+
+}
+.post, .notable_user {
+	display: inline-block;
+}
+
+.post {
+	margin: 25px;
+	background-color: white;
+}
+
+/*----------------------------------------------------------------------------------------
+									Article & Aside pictures
+----------------------------------------------------------------------------------------*/ 
+.article_img, .sophie {
+	display: inline-block;
+	float: left;
+}
+
+.article_img {
+	clear: left;
+}
+
+.sophie {
+	width: 200px;
+}
+
+.aside_img {
+	display: block;
+}
+
+/*----------------------------------------------------------------------------------------
+									Aside text
+----------------------------------------------------------------------------------------*/ 
+#aside {
+	width: 25%;
+	background-color: #BFD1E0;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: black;
+	float: left;
+}
+
+/*----------------------------------------------------------------------------------------
+									Footer
+----------------------------------------------------------------------------------------*/ 
+.welcome {
+	display: block;
+	position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
