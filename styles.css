@@ -190,11 +190,8 @@ table {
 }
 .post, .notable_user {
 	display: inline-block;
-<<<<<<< HEAD
-=======
 	padding: 10px;
 	border-radius: 5px;
->>>>>>> master
 }
 
 .post {
@@ -238,6 +235,10 @@ h2 {
 	text-align: left;
 }
 
+#sophie_bio {
+	display: block;
+}
+
 /*----------------------------------------------------------------------------------------
 									Article & Aside pictures
 ----------------------------------------------------------------------------------------*/ 
@@ -259,7 +260,9 @@ h2 {
 }
 
 .sophie_aside {
+	width: 200px;
 	display: block;
+	border-radius: 4px;
 	margin: 0 auto;
 }
 
