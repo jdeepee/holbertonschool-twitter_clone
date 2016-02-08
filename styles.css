@@ -190,6 +190,11 @@ table {
 }
 .post, .notable_user {
 	display: inline-block;
+<<<<<<< HEAD
+=======
+	padding: 10px;
+	border-radius: 5px;
+>>>>>>> master
 }
 
 .post {
@@ -197,24 +202,78 @@ table {
 	background-color: white;
 }
 
+<<<<<<< HEAD
 /*----------------------------------------------------------------------------------------
 									Article & Aside pictures
 ----------------------------------------------------------------------------------------*/ 
 .article_img, .sophie {
 	display: inline-block;
 	float: left;
+=======
+body h1, h2, p {
+    font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
+
+p {
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 140%;
+}
+
+h1, h2 {
+    text-indent: 10px;
+}
+
+strong {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;	
+}
+
+/*----------------------------------------------------------------------------------------
+									Article & Aside pictures
+----------------------------------------------------------------------------------------*/ 
+.article_img, .sophie_post {
+	display: inline-block;
+	float: left;
+	padding: 5px;
+	border-radius: 4px;
+>>>>>>> master
 }
 
 .article_img {
 	clear: left;
 }
 
+<<<<<<< HEAD
 .sophie {
 	width: 200px;
+=======
+.sophie_post, .sophie_aside {
+	width: 200px;
+	border-radius: 4px;
+>>>>>>> master
 }
 
 .aside_img {
 	display: block;
+<<<<<<< HEAD
+=======
+	margin: 0 auto;
+	border-radius: 4px;
+}
+
+.sophie_aside {	
+	margin: 0 auto;
+>>>>>>> master
 }
 
 /*----------------------------------------------------------------------------------------
