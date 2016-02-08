@@ -190,6 +190,8 @@ table {
 }
 .post, .notable_user {
 	display: inline-block;
+	padding: 10px;
+	border-radius: 5px;
 }
 
 .post {
@@ -197,24 +199,61 @@ table {
 	background-color: white;
 }
 
+body h1, h2, p {
+    font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
+
+p {
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 140%;
+}
+
+h1, h2 {
+    text-indent: 10px;
+}
+
+strong {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;	
+}
+
 /*----------------------------------------------------------------------------------------
 									Article & Aside pictures
 ----------------------------------------------------------------------------------------*/ 
-.article_img, .sophie {
+.article_img, .sophie_post {
 	display: inline-block;
 	float: left;
+	padding: 5px;
+	border-radius: 4px;
 }
 
 .article_img {
 	clear: left;
 }
 
-.sophie {
+.sophie_post, .sophie_aside {
 	width: 200px;
+	border-radius: 4px;
 }
 
 .aside_img {
 	display: block;
+	margin: 0 auto;
+	border-radius: 4px;
+}
+
+.sophie_aside {	
+	margin: 0 auto;
 }
 
 /*----------------------------------------------------------------------------------------
