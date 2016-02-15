@@ -49,6 +49,36 @@ table {
 	border-spacing: 0;
 }
 
+/* Resizes for screens with width between 768px and 992px */
+@media only screen and (max-width: 992px) {
+    body {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    header {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    #aside {
+    	min-width: 100%;
+    	display: inline;
+    }
+
+    .notable_user, .aside_img {
+    	width: 20%;
+    	display: inline;
+    	float: left;
+    }
+
+    #article {
+    	min-width: 100%;
+    	display: inline;
+    }
+}
+
+/* Resizes for screens with max width 768px */
 @media only screen and (max-width: 768px) {
     body {
     	display: inline;
@@ -63,6 +93,12 @@ table {
     #aside {
     	min-width: 100%;
     	display: inline;
+    }
+
+    .notable_user, .aside_img {
+    	width: 100%;
+    	display: inline;
+    	float: left;
     }
 
     #article {
@@ -312,4 +348,5 @@ h2 {
 	position: fixed;
     bottom: 10px;
     right: 10px;
+    float: right
 }
