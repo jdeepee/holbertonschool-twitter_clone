@@ -72,7 +72,7 @@ table {
 }
 
 /*----------------------------------------------------------------------------------------
-									nav-bar
+									Nav-bar
 ----------------------------------------------------------------------------------------*/
 
 .nav{
@@ -101,7 +101,7 @@ table {
 	float: center;
 }
 
-#nav-buttons {
+.nav-buttons {
 	border:1px solid #fff;
 	background: red; /* For browsers that do not support gradients */
 	background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
@@ -124,7 +124,7 @@ table {
 }
 
 /*----------------------------------------------------------------------------------------
-									login-bar
+									Login-bar
 ----------------------------------------------------------------------------------------*/
 
 #login {
@@ -135,7 +135,7 @@ table {
 	top: -40%; 
 }
 
-#edit_log {
+.edit_log {
 	border-bottom:1px solid #fff;
 	background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
@@ -150,7 +150,7 @@ table {
 
 
 /*----------------------------------------------------------------------------------------
-									header
+									Header
 ----------------------------------------------------------------------------------------*/
 
 #header {
@@ -221,6 +221,10 @@ table {
 	background-color: white;
 }
 
+/*----------------------------------------------------------------------------------------
+									Article & Aside text
+----------------------------------------------------------------------------------------*/ 
+
 body h1, h2, p {
     font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
@@ -249,6 +253,14 @@ h2 {
 	font-size: 30px;	
 }
 
+#sophie_name_aside {
+	text-align: left;
+}
+
+#sophie_bio {
+	display: block;
+}
+
 /*----------------------------------------------------------------------------------------
 									Article & Aside pictures
 ----------------------------------------------------------------------------------------*/ 
@@ -263,23 +275,25 @@ h2 {
 	clear: left;
 }
 
-.sophie_post, .sophie_aside {
+.sophie_post {
 	width: 200px;
 	border-radius: 4px;
+	margin: 0 auto;
 }
 
 .aside_img {
 	width: auto;
 	margin: 0 auto;
+}
+
+.aside_img {
+	display: block;
+	margin: 0 auto;
 	border-radius: 4px;
 }
 
-.sophie_aside {	
-	margin: 0 auto;
-}
-
 /*----------------------------------------------------------------------------------------
-									Aside text
+									Aside style
 ----------------------------------------------------------------------------------------*/ 
 #aside {
 	width: 25%;
