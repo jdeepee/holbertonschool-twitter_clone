@@ -49,8 +49,66 @@ table {
 	border-spacing: 0;
 }
 
+/* Resizes for screens with width between 768px and 992px */
+@media only screen and (max-width: 992px) {
+    body {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    header {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    #aside {
+    	min-width: 100%;
+    	display: inline;
+    }
+
+    .notable_user, .aside_img {
+    	width: 20%;
+    	display: inline;
+    	float: left;
+    }
+
+    #article {
+    	min-width: 100%;
+    	display: inline;
+    }
+}
+
+/* Resizes for screens with max width 768px */
+@media only screen and (max-width: 768px) {
+    body {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    header {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    #aside {
+    	min-width: 100%;
+    	display: inline;
+    }
+
+    .notable_user, .aside_img {
+    	width: 100%;
+    	display: inline;
+    	float: left;
+    }
+
+    #article {
+    	min-width: 100%;
+    	display: inline;
+    }
+}
+
 /*----------------------------------------------------------------------------------------
-									nav-bar
+									Nav-bar
 ----------------------------------------------------------------------------------------*/
 
 .nav{
@@ -71,49 +129,46 @@ table {
 }
 
 #nav-div {
-	position: relative;
-	width: auto;
+    display: flex;
+    align-content: flex-end;
+    width: auto;
 	top: 90%; left: 100%;
-  	transform: translate(-100%,-100%);
 	text-align: center;
-	float: center;
 }
 
-#nav-buttons {
+.nav-buttons {
 	border:1px solid #fff;
 	background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(red, orange); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(red, orange); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(red, orange); /* Standard syntax */
-    -o-transition: all 1s ease-in-out;
-  	-ms-transition: all 1s ease-in-out;
-  	-moz-transition: all 1s ease-in-out;
-  	-webkit-transition: all 1s ease-in-out;
-  	transition: all 1s ease-in-out;
+	background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(red, orange); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(red, orange); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(red, orange); /* Standard syntax */
 }
 
 #nav-buttons:hover {
 	background: orange; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(orange, red); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(orange, red); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(orange, red); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(orange, red); /* Standard syntax */
+	background: -webkit-linear-gradient(orange, red); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(orange, red); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(orange, red); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(orange, red); /* Standard syntax */
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
 
 /*----------------------------------------------------------------------------------------
-									login-bar
+									Login-bar
 ----------------------------------------------------------------------------------------*/
 
 #login {
-	float: right;
-	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	top: -40%; 
 }
 
-#edit_log {
+.edit_log {
 	border-bottom:1px solid #fff;
 	background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
@@ -128,26 +183,27 @@ table {
 
 
 /*----------------------------------------------------------------------------------------
-									header
+									Header
 ----------------------------------------------------------------------------------------*/
 
 #header {
 	background-color: black;
     color: white;
-    width: 992px;
+    width: 100%;
     height: 100px;
 }
 
 #container-header {
-	background-image: url(header-image.jpg);
-	width: 992px;
+	display: flex; 
+	flex-flow: row wrap;
+	justify-content: space-around;
+    align-content: flex-end;
+    background-image: url(header-image.jpg);
+	width: 100%;
 	height: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px;
-	display: block; 
-	clear: both;
-	overflow: hidden;
 }
 
 
@@ -199,6 +255,10 @@ table {
 	background-color: white;
 }
 
+/*----------------------------------------------------------------------------------------
+									Article & Aside text
+----------------------------------------------------------------------------------------*/ 
+
 body h1, h2, p {
     font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
@@ -227,6 +287,14 @@ h2 {
 	font-size: 30px;	
 }
 
+#sophie_name_aside {
+	text-align: left;
+}
+
+#sophie_bio {
+	display: block;
+}
+
 /*----------------------------------------------------------------------------------------
 									Article & Aside pictures
 ----------------------------------------------------------------------------------------*/ 
@@ -241,9 +309,15 @@ h2 {
 	clear: left;
 }
 
-.sophie_post, .sophie_aside {
+.sophie_post {
 	width: 200px;
 	border-radius: 4px;
+	margin: 0 auto;
+}
+
+.aside_img {
+	width: auto;
+	margin: 0 auto;
 }
 
 .aside_img {
@@ -252,12 +326,8 @@ h2 {
 	border-radius: 4px;
 }
 
-.sophie_aside {	
-	margin: 0 auto;
-}
-
 /*----------------------------------------------------------------------------------------
-									Aside text
+									Aside style
 ----------------------------------------------------------------------------------------*/ 
 #aside {
 	width: 25%;
@@ -273,7 +343,9 @@ h2 {
 ----------------------------------------------------------------------------------------*/ 
 .welcome {
 	display: block;
+    background-color: #e8e8e8;
 	position: fixed;
     bottom: 10px;
     right: 10px;
+    float: right
 }
