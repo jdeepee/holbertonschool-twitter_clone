@@ -233,7 +233,7 @@ table {
 									Main
 ----------------------------------------------------------------------------------------*/                                                                                                                             
 /*----------------------------------------------------------------------------------------
-									Article text
+									Article & Aside text
 ----------------------------------------------------------------------------------------*/ 
 #article { 
 	width: 75%;
@@ -246,18 +246,13 @@ table {
 }
 .post, .notable_user {
 	display: inline-block;
-	padding: 10px;
-	border-radius: 5px;
+	padding: 5px;
 }
 
 .post {
 	margin: 25px;
 	background-color: white;
 }
-
-/*----------------------------------------------------------------------------------------
-									Article & Aside text
-----------------------------------------------------------------------------------------*/ 
 
 body h1, h2, p {
     font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
@@ -302,7 +297,7 @@ h2 {
 	display: inline-block;
 	float: left;
 	padding: 5px;
-	border-radius: 4px;
+	border-radius: 10px;
 }
 
 .article_img {
@@ -318,12 +313,10 @@ h2 {
 .aside_img {
 	width: auto;
 	margin: 0 auto;
-}
-
-.aside_img {
 	display: block;
 	margin: 0 auto;
-	border-radius: 4px;
+	border-radius: 10px;
+    padding: 20px;
 }
 
 /*----------------------------------------------------------------------------------------
@@ -348,4 +341,8 @@ h2 {
     bottom: 10px;
     right: 10px;
     float: right
+}
+
+footer p {
+    font-size: 12px;
 }
