@@ -56,13 +56,21 @@ table {
     }
 
     header {
-    	display: inline;
+    	display: flex;
+    	flex-direction: column;
     	min-width: 100%;
+    	min-height: 100%;
     }
 
     #aside {
     	min-width: 100%;
     	display: inline;
+    }
+
+    #container-header{
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
     }
 
     #article {
@@ -77,9 +85,10 @@ table {
 
 .nav{
     list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 }
 
 .nav li{
@@ -93,12 +102,9 @@ table {
 }
 
 #nav-div {
-	position: relative;
-	width: auto;
-	top: 90%; left: 100%;
-	transform: translate(-100%,-100%);
-	text-align: center;
-	float: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .nav-buttons {
@@ -128,11 +134,9 @@ table {
 ----------------------------------------------------------------------------------------*/
 
 #login {
-	float: right;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	top: -40%; 
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
 }
 
 .edit_log {
@@ -156,33 +160,29 @@ table {
 #header {
 	background-color: black;
     color: white;
-    width: 100%;
-    height: 100px;
+    height: 150px;
 }
 
 #container-header {
 	background-image: url(header-image.jpg);
-	width: 100%;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0px;
-	display: block; 
-	clear: both;
-	overflow: hidden;
+	height: 150px;
+	display: flex; 
+	flex-wrap: wrap;
 }
 
 
 #image-div {
 	height: 70px;
 	width: 70px;
-	float: left;
-	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 #tagline {
-	position: relative;
-	top: 80%; right: 7%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
 }
 
 #image {
