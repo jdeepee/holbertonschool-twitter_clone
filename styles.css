@@ -57,8 +57,16 @@ table {
     }
 
     header {
-    	display: inline;
+    	display: flex;
+    	flex-direction: column;
     	min-width: 100%;
+    	min-width: 100%;
+    }
+
+    #container-header{
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
     }
 
     #aside {
@@ -76,6 +84,12 @@ table {
     	min-width: 100%;
     	display: inline;
     }
+
+    #login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
 }
 
 /* Resizes for screens with max width 768px */
@@ -103,10 +117,17 @@ table {
     	align-items: center;
     }
 
+
     #article {
     	min-width: 100%;
     	display: inline;
     }
+
+    #login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
 }
 
 /*----------------------------------------------------------------------------------------
@@ -114,7 +135,6 @@ table {
 ----------------------------------------------------------------------------------------*/
 
 .nav{
-    list-style:none;
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -122,12 +142,11 @@ table {
 }
 
 .nav li{
-    display:inline;
-    float: center;
+	display: flex;
+	align-content: center;
 }
 
 .nav a{
-    display:inline-block;
     padding:10px;
 }
 
@@ -165,8 +184,8 @@ table {
 
 #login {
 	display: flex;
-	justify-content: flex-start;
-	align-content: flex-start;
+	justify-content: flex-end;
+	align-items: flex-start;
 }
 
 .edit_log {
@@ -190,14 +209,16 @@ table {
 #header {
 	background-color: black;
     color: white;
-    height: 150px;
+    height: 170px;
 }
 
 #container-header {
 	background-image: url(header-image.jpg);
-	height: 150px;
+	height: 170px;
 	display: flex; 
 	flex-wrap: wrap;
+	clear: both;
+	overflow: hidden;
 }
 
 
