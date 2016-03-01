@@ -49,7 +49,7 @@ table {
 	border-spacing: 0;
 }
 
-/* Resizes for screens with width between 768px and 992px */
+/*------------------------Resizes for screens with width between 768px and 992px --------------------------*/
 @media only screen and (max-width: 992px) {
     body {
     	display: inline;
@@ -57,8 +57,16 @@ table {
     }
 
     header {
-    	display: inline;
+    	display: flex;
+    	flex-direction: column;
     	min-width: 100%;
+    	min-width: 100%;
+    }
+
+    #container-header{
+    	display: flex;
+    	flex-direction: row;
+    	align-items: center;
     }
 
     #aside {
@@ -76,9 +84,15 @@ table {
     	min-width: 100%;
     	display: inline;
     }
+
+    #login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
 }
 
-/* Resizes for screens with max width 768px */
+/*---------------------------- Resizes for screens with max width 768px -----------------------*/
 @media only screen and (max-width: 768px) {
     body {
     	display: inline;
@@ -86,8 +100,10 @@ table {
     }
 
     header {
-    	display: inline;
+    	display: flex;
+    	flex-direction: column;
     	min-width: 100%;
+    	min-height: 100%;
     }
 
     #aside {
@@ -95,16 +111,24 @@ table {
     	display: inline;
     }
 
-    .notable_user, .aside_img {
-    	width: 100%;
-    	display: inline;
-    	float: left;
+    #container-header{
+    	display: flex;
+    	flex-direction: row;
+    	align-items: center;
     }
 
     #article {
     	min-width: 100%;
     	display: inline;
     }
+
+    #login {
+	   display: flex;
+        justify-content: center;
+	   align-items: center;
+        flex-direction: row;
+        order: -1;
+	}
 }
 
 /*----------------------------------------------------------------------------------------
@@ -112,29 +136,25 @@ table {
 ----------------------------------------------------------------------------------------*/
 
 .nav{
-    list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
 }
 
 .nav li{
-    display:inline;
-    float: center;
+	display: flex;
+	align-content: center;
 }
 
 .nav a{
-    display:inline-block;
     padding:10px;
 }
 
 #nav-div {
-	position: relative;
-	width: auto;
-	top: 90%; left: 100%;
-	transform: translate(-100%,-100%);
-	text-align: center;
-	float: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .nav-buttons {
@@ -164,11 +184,9 @@ table {
 ----------------------------------------------------------------------------------------*/
 
 #login {
-	float: right;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	top: -40%; 
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
 }
 
 .edit_log {
@@ -192,33 +210,30 @@ table {
 #header {
 	background-color: black;
     color: white;
-    width: 100%;
-    height: 100px;
+    height: 170px;
 }
 
 #container-header {
 	background-image: url(header-image.jpg);
-	width: 100%;
-	height: 100px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0px;
-	display: block; 
+	height: 170px;
+	display: flex; 
+	flex-wrap: wrap;
 	clear: both;
 	overflow: hidden;
 }
 
-
 #image-div {
 	height: 70px;
 	width: 70px;
-	float: left;
-	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
 }
 
 #tagline {
-	position: relative;
-	top: 80%; right: 7%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
 }
 
 #image {
@@ -235,7 +250,7 @@ table {
 									Main
 ----------------------------------------------------------------------------------------*/                                                                                                                             
 /*----------------------------------------------------------------------------------------
-									Article text
+									Article & Aside text
 ----------------------------------------------------------------------------------------*/ 
 #article { 
 	width: 75%;
@@ -253,13 +268,9 @@ table {
 }
 
 .post {
-	margin: 25px;
-	background-color: white;
+    margin: 25px;
+    background-color: white;
 }
-
-/*----------------------------------------------------------------------------------------
-									Article & Aside text
-----------------------------------------------------------------------------------------*/ 
 
 body h1, h2, p {
     font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
@@ -303,7 +314,7 @@ h2 {
 .article_img, .sophie_post {
 	display: inline-block;
 	float: left;
-	padding: 5px;
+	padding: 20px;
 	border-radius: 4px;
 }
 
@@ -346,7 +357,12 @@ h2 {
 .welcome {
 	display: block;
 	position: fixed;
+    background-color: #BFD1E0;
     bottom: 10px;
     right: 10px;
     float: right
+}
+
+footer p {
+    font-size: 12px;
 }
