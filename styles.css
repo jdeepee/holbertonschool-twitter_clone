@@ -49,7 +49,7 @@ table {
 	border-spacing: 0;
 }
 
-/* Resizes for screens with width between 768px and 992px */
+/*------------------------Resizes for screens with width between 768px and 992px --------------------------*/
 @media only screen and (max-width: 992px) {
     body {
     	display: inline;
@@ -65,7 +65,7 @@ table {
 
     #container-header{
     	display: flex;
-    	flex-direction: column;
+    	flex-direction: row;
     	align-items: center;
     }
 
@@ -92,7 +92,7 @@ table {
 	}
 }
 
-/* Resizes for screens with max width 768px */
+/*---------------------------- Resizes for screens with max width 768px -----------------------*/
 @media only screen and (max-width: 768px) {
     body {
     	display: inline;
@@ -113,10 +113,9 @@ table {
 
     #container-header{
     	display: flex;
-    	flex-direction: column;
+    	flex-direction: row;
     	align-items: center;
     }
-
 
     #article {
     	min-width: 100%;
@@ -124,9 +123,11 @@ table {
     }
 
     #login {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	   display: flex;
+        justify-content: center;
+	   align-items: center;
+        flex-direction: row;
+        order: -1;
 	}
 }
 
@@ -221,7 +222,6 @@ table {
 	overflow: hidden;
 }
 
-
 #image-div {
 	height: 70px;
 	width: 70px;
@@ -250,7 +250,7 @@ table {
 									Main
 ----------------------------------------------------------------------------------------*/                                                                                                                             
 /*----------------------------------------------------------------------------------------
-									Article text
+									Article & Aside text
 ----------------------------------------------------------------------------------------*/ 
 #article { 
 	width: 75%;
@@ -268,8 +268,8 @@ table {
 }
 
 .post {
-	margin: 25px;
-	background-color: white;
+    margin: 25px;
+    background-color: white;
 }
 
 #form {
@@ -337,7 +337,7 @@ h2 {
 .article_img, .sophie_post {
 	display: inline-block;
 	float: left;
-	padding: 5px;
+	padding: 20px;
 	border-radius: 4px;
 }
 
@@ -380,7 +380,12 @@ h2 {
 .welcome {
 	display: block;
 	position: fixed;
+    background-color: #BFD1E0;
     bottom: 10px;
     right: 10px;
     float: right
+}
+
+footer p {
+    font-size: 12px;
 }
