@@ -272,6 +272,25 @@ table {
 	background-color: white;
 }
 
+#form {
+	visibility: hidden;
+}
+
+.form-reply {
+}
+
+#data-form-id{
+	
+}
+
+.hidden {
+	display: none;
+}
+
+#button-form{
+	float: center;
+}
+
 /*----------------------------------------------------------------------------------------
 									Article & Aside text
 ----------------------------------------------------------------------------------------*/ 
