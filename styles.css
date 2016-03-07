@@ -49,63 +49,6 @@ table {
 	border-spacing: 0;
 }
 
-/* Resizes for screens with width between 768px and 992px */
-@media only screen and (max-width: 992px) {
-    body {
-    	display: inline;
-    	min-width: 100%;
-    }
-
-    header {
-    	display: inline;
-    	min-width: 100%;
-    }
-
-    #aside {
-    	min-width: 100%;
-    	display: inline;
-    }
-
-    .notable_user, .aside_img {
-    	width: 20%;
-    	display: inline;
-    	float: left;
-    }
-
-    #article {
-    	min-width: 100%;
-    	display: inline;
-    }
-}
-
-/* Resizes for screens with max width 768px */
-@media only screen and (max-width: 768px) {
-    body {
-    	display: inline;
-    	min-width: 100%;
-    }
-
-    header {
-    	display: inline;
-    	min-width: 100%;
-    }
-
-    #aside {
-    	min-width: 100%;
-    	display: inline;
-    }
-
-    .notable_user, .aside_img {
-    	width: 100%;
-    	display: inline;
-    	float: left;
-    }
-
-    #article {
-    	min-width: 100%;
-    	display: inline;
-    }
-}
 
 /*----------------------------------------------------------------------------------------
 									Nav-bar
@@ -235,14 +178,17 @@ table {
 /*----------------------------------------------------------------------------------------
 									Article & Aside text
 ----------------------------------------------------------------------------------------*/ 
+#main_container {
+	display: flex;
+	flex-direction: row;
+}
+
 #article { 
 	width: 75%;
 	background-color: #e8e8e8;
     border-radius: 10px;
-    display: block;
 	overflow-y: auto;
-	float: left;
-
+	flex-direction: column;
 }
 .post, .notable_user {
 	display: inline-block;
@@ -328,21 +274,90 @@ h2 {
     opacity: 0.9;
     border-radius: 10px;
     color: black;
-	float: left;
+	flex-direction: column;
 }
 
 /*----------------------------------------------------------------------------------------
 									Footer
 ----------------------------------------------------------------------------------------*/ 
 .welcome {
-	display: block;
     background-color: #e8e8e8;
 	position: fixed;
     bottom: 10px;
     right: 10px;
-    float: right
+	flex-direction: column;
 }
 
 footer p {
     font-size: 12px;
+}
+
+
+/* Resizes for screens with width between 768px and 992px */
+@media only screen and (max-width: 992px) {
+    body {
+    	display: flex;
+    	min-width: 100%;
+    }
+
+    header {
+    	display: flex;
+    	min-width: 100%;
+    }
+
+	#main_container {
+		display: flex;
+		flex-direction: row;
+	}
+
+    #aside {
+    	width: 30%;
+    	flex-direction: column;
+    }
+
+    .notable_user, .aside_img {
+    	width: 20%;
+    	display: flex;
+    	flex-direction: column;
+    }
+
+    #article {
+    	width: 70%;
+     	flex-direction: column;
+    }
+}
+
+/* Resizes for screens with max width 768px */
+@media only screen and (max-width: 768px) {
+    body {
+    	display: flex;
+    	min-width: 100%;
+    }
+
+    header {
+    	display: flex;
+    	min-width: 100%;
+    }
+
+    #main_container {
+		display: flex;
+		flex-direction: row;
+	}
+
+    #aside {
+    	min-width: 100%;
+    	display: flex;
+   	 	flex-direction: column;
+    }
+
+    .notable_user, .aside_img {
+    	width: 100%;
+    	display: flex;
+    }
+
+    #article {
+    	min-width: 100%;
+    	display: flex;
+   	 	flex-direction: column;
+    }
 }
