@@ -18,13 +18,13 @@
 
 </head>
 
-<body class="body">
+<body class="body"> <!-- Class is used for style -->
 
-<div class="wrapper">
+<div id="wrapper"> <!-- Container for all content. Contains #container-header and #container-main -->
 
 		<header id="header">
-			<div id="container-header">
-				<div id="image-div">
+			<div id="container-header"> <!-- #container-header is a child of #wrapper -->
+				<div id="logo">
 					<img id="image" src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2/48/100-512.png" alt="running logo">
 				</div>
 			
@@ -60,8 +60,8 @@
 	- the status's content itself, short or long -->
 	
 		<main>
-
-			<br>
+		<div id="container-main"> <!-- #container-main is a child of #wrapper -->	
+			<br> <!-- Check if br can be replaced by a "gap" style as per Rudy's advice -->
 			<div id="article">
 
 				<h1>Impossible octopus fitness</h1>
@@ -86,13 +86,10 @@
 			
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/siphan_intranet-1.jpg?1453444143" alt="user siphan">
-					<p>
-						<strong>Siphan Bou</strong>
-					</p>
+					
+					<h3>Siphan Bou<h3/>
 					<br>	
-					<p>
-						<strong>February 6, 2016</strong>
-					</p>
+						<h4>February 6, 2016</h4>
 					<br>
 					<br>
 					<h2>Running in San Francisco</h2>
@@ -122,13 +119,9 @@
 
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/014/thumb/me.jpg?1453569803" alt="user josh"/>
-					<p>
-						<strong>Josh Parkin</strong>
-					</p>
+						<h3>Josh Parkin</h3>
 					<br>
-					<p>
-						<strong>February 5, 2016</strong>
-					</p>
+						<h4>February 5, 2016</h4>
 					<br>
 					<br>
 					<h2>Running on treadmills</h2>
@@ -155,13 +148,9 @@
 
 			<div class="post">
 				<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/047/thumb/nomipic.jpg?1453877446" alt="user sophie"/>
-				<p>
-					<strong>Sophie Rigault-Barbier</strong>
-				</p>
+					<h3>Sophie Rigault-Barbier</h3>
 				<br>
-				<p>
-					<strong>February 4, 2016</strong>
-				</p>
+					<h4>February 4, 2016</h4>
 				<br>
 				<br>
 				<h2>Training for San Francisco half marathon</h2>
@@ -187,13 +176,9 @@
 
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/018/thumb/10805743_744774678939939_1422144655117219420_n.jpg?1453449746" alt="user electra"/>
-					<p>
-						<strong>Electra Chong</strong>
-					</p>
+						<h3>Electra Chong</h3>
 					<br>
-					<p>
-						<strong>February 3, 2016</strong>
-					</p>
+						<h4>February 3, 2016</h4>
 					<br>
 					<br>
 					<h2>Secretly running at night</h2>
@@ -223,13 +208,9 @@
 
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine"/>
-					<p>
-						<strong>Marine Dejean</strong>
-					</p>	
+						<h3>Marine Dejean</h3>
 					<br>
-					<p>
-						<strong>February 2, 2016</strong>
-					</p>
+						<h4>February 2, 2016</h4>
 					<br>
 					<br>
 					<h2>Running outdoors</h2>
@@ -256,13 +237,9 @@
 			
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/027/thumb/Screen_Shot_2015-12-03_at_10.31.06_AM.jpg?1452827557" alt="user steven"/>
-					<p>
-						<strong>Steven Garcia</strong>
-					</p>
+						<h3>Steven Garcia</h3>
 					<br>	
-					<p>
-						<strong>February 1, 2016</strong>
-					</p>
+						<h4>February 1, 2016</h4>
 					<br>
 					<br>
 					<h2>Staying fit while preventing injuries</h2>
@@ -288,13 +265,9 @@
 
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/020/thumb/rona_square_img.JPG?1453083037" alt="user rona"/>
-					<p>
-						<strong>Rona Chong</strong>
-					</p>
+						<h3>Rona Chong</h3>
 					<br>	
-					<p>
-						<strong>January 22, 2016</strong>
-					</p>
+						<h4>January 22, 2016</h4>
 					<br>
 					<br>
 					<h2>I want to be buff</h2>
@@ -332,9 +305,7 @@
 
 			<div class="notable_user">
 				<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/047/thumb/nomipic.jpg?1453877446" alt="user sophie"/>
-				<p>
-					<strong>Sophie Rigault-Barbier</strong>
-				</p>
+					<h5>Sophie Rigault-Barbier</h5>
 				<br>
 				<p>
 					Sophie used to be a top athlete - 11 years of competition in tennis and 4 years in volleyball. Although she really enjoyed it, when she started working she didn’t get to practice sports much for almost 6 years.
@@ -344,9 +315,7 @@
 
 				<div class="notable_user">
 					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/018/thumb/10805743_744774678939939_1422144655117219420_n.jpg?1453449746" alt="user electra"/>
-					<p>
-						<strong>Electra Chong</strong>
-					</p>
+						<h5>Electra Chong</h5>
 					<br>
 					<p>
 					Electra is a 22-year-old resident of San Francisco, formerly of the Central Valley and Southern California. Along with running, she enjoys crochet, anime/manga, and sci-fi and fantasy.
@@ -356,9 +325,7 @@
 
 				<div class="notable_user">
 					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine"/>
-					<p>
-						<strong>Marine Dejean</strong>
-					</p>	
+						<h5>Marine Dejean</h5>
 					<br>
 					<p>
 					Marine is a 19 year old Paris, France native who moved to Santa Clara, California a year and a half ago with her American mother. She is a vegetarian foodie and enjoys outdoor activities such as running and hiking.
@@ -368,9 +335,7 @@
 
 				<div class="notable_user">
 					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/027/thumb/Screen_Shot_2015-12-03_at_10.31.06_AM.jpg?1452827557" alt="user steven"/>
-					<p>
-						<strong>Steven Garcia</strong>
-					</p>	
+						<h5>Steven Garcia</h5>	
 					<br>
 					<p>
 					Steven was born in Brooklyn, NY and grew up in Madrid, Spain. His family and him moved to California when he was 10. 
@@ -385,6 +350,7 @@
 				</div>	
 			</footer>
 
+		</div>	
 		</main>
 
 </div>

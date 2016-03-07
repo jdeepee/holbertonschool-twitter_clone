@@ -1,3 +1,7 @@
+/*----------------------------------------------------------------------------------------
+										Resets
+----------------------------------------------------------------------------------------*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,90 +53,94 @@ table {
 	border-spacing: 0;
 }
 
-/*------------------------Resizes for screens with width between 768px and 992px --------------------------*/
-@media only screen and (max-width: 992px) {
-    body {
-    	display: inline;
-    	min-width: 100%;
-    }
 
-    header {
-    	display: flex;
-    	flex-direction: column;
-    	min-width: 100%;
-    	min-width: 100%;
-    }
+/*----------------------------------------------------------------------------------------
+									Overall layout
+----------------------------------------------------------------------------------------*/
 
-    #container-header{
-    	display: flex;
-    	flex-direction: row;
-    	align-items: center;
-    }
-
-    #aside {
-    	min-width: 100%;
-    	display: inline;
-    }
-
-    .notable_user, .aside_img {
-    	width: 20%;
-    	display: inline;
-    	float: left;
-    }
-
-    #article {
-    	min-width: 100%;
-    	display: inline;
-    }
-
-    #login {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	}
+.body { 
+	width: 992px;
+	height: auto;
 }
 
-/*---------------------------- Resizes for screens with max width 768px -----------------------*/
-@media only screen and (max-width: 768px) {
-    body {
-    	display: inline;
-    	min-width: 100%;
-    }
+#wrapper { /* Has #container-header and #container-main as container children */
+	display: flex;
+	flex-direction: column;
+}
 
-    header {
-    	display: flex;
-    	flex-direction: column;
-    	min-width: 100%;
-    	min-height: 100%;
-    }
+body h1, h2, p {
+    font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+}
 
-    #aside {
-    	min-width: 100%;
-    	display: inline;
-    }
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
 
-    #container-header{
-    	display: flex;
-    	flex-direction: row;
-    	align-items: center;
-    }
+h1 {
+	font-size: 40px;
+}
 
-    #article {
-    	min-width: 100%;
-    	display: inline;
-    }
+h2 {
+	font-size: 30px;	
+}
 
-    #login {
-	   display: flex;
-        justify-content: center;
-	   align-items: center;
-        flex-direction: row;
-        order: -1;
-	}
+h3 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+p {
+    text-indent: 20px;
+    text-align: justify;
+    line-height: 140%;
+    font-size: 15px;
 }
 
 /*----------------------------------------------------------------------------------------
-									Nav-bar
+										Header
+----------------------------------------------------------------------------------------*/
+
+#header {
+	background-color: black;
+    color: white;
+    height: 170px;
+}
+
+#container-header { /* Children divs for Flexbox are #logo, #tagline, #nav-div, #login */
+	background-image: url(header-image.jpg);
+	height: 170px;
+	display: flex; 
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+#logo { /* Child div of #container-header */
+	height: 70px;
+	width: 70px;
+	align-self: flex-start;
+}
+
+#tagline { /* Child div of #container-header */
+	align-self: flex-end;
+}
+
+#image {
+	height: 70px;
+	width: 70px;
+}
+
+/*----------------------------------------------------------------------------------------
+										Nav-bar
 ----------------------------------------------------------------------------------------*/
 
 .nav{
@@ -151,10 +159,8 @@ table {
     padding:10px;
 }
 
-#nav-div {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+#nav-div { /* Child div of #container-header */
+	align-self: flex-end;
 }
 
 .nav-buttons {
@@ -180,13 +186,11 @@ table {
 }
 
 /*----------------------------------------------------------------------------------------
-									Login-bar
+										Login-bar
 ----------------------------------------------------------------------------------------*/
 
-#login {
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-start;
+#login { /* Child div of #container-header */
+	align-self: flex-start;
 }
 
 .edit_log {
@@ -204,67 +208,40 @@ table {
 
 
 /*----------------------------------------------------------------------------------------
-									Header
-----------------------------------------------------------------------------------------*/
-
-#header {
-	background-color: black;
-    color: white;
-    height: 170px;
-}
-
-#container-header {
-	background-image: url(header-image.jpg);
-	height: 170px;
-	display: flex; 
-	flex-wrap: wrap;
-	clear: both;
-	overflow: hidden;
-}
-
-#image-div {
-	height: 70px;
-	width: 70px;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-}
-
-#tagline {
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-end;
-}
-
-#image {
-	height: 70px;
-	width: 70px;
-}
-
-#body {
-	width: 992px;
-	height: auto;
-}
-
-/*----------------------------------------------------------------------------------------
-									Main
+											Main
 ----------------------------------------------------------------------------------------*/                                                                                                                             
 /*----------------------------------------------------------------------------------------
 									Article & Aside text
-----------------------------------------------------------------------------------------*/ 
+----------------------------------------------------------------------------------------*/
+
+ #container-main { /* Container of #article and #aside */
+	display: flex;
+	flex-direction: row;
+}
+
 #article { 
 	width: 75%;
 	background-color: #e8e8e8;
     border-radius: 10px;
-    display: block;
 	overflow-y: auto;
-	float: left;
-
 }
+
+#aside {
+	width: 25%;
+	background-color: #BFD1E0;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: black;
+}
+
 .post, .notable_user {
 	display: inline-block;
-	padding: 10px;
 	border-radius: 5px;
+	padding: 20px;
+}
+
+.notable_user p {
+	font-size: 12px;
 }
 
 .post {
@@ -280,7 +257,7 @@ table {
 }
 
 #data-form-id{
-	
+
 }
 
 .hidden {
@@ -289,38 +266,6 @@ table {
 
 #button-form{
 	float: center;
-}
-
-/*----------------------------------------------------------------------------------------
-									Article & Aside text
-----------------------------------------------------------------------------------------*/ 
-
-body h1, h2, p {
-    font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
-}
-
-p {
-    text-indent: 20px;
-    text-align: justify;
-    line-height: 140%;
-}
-
-h1, h2 {
-    text-indent: 10px;
-}
-
-strong {
-	font-weight: bold;
-	font-size: 20px;
-}
-
-h1 {
-	text-align: center;
-	font-size: 40px;
-}
-
-h2 {
-	font-size: 30px;	
 }
 
 #sophie_name_aside {
@@ -338,7 +283,7 @@ h2 {
 	display: inline-block;
 	float: left;
 	padding: 20px;
-	border-radius: 4px;
+	border-radius: 10px;
 }
 
 .article_img {
@@ -360,32 +305,121 @@ h2 {
 	display: block;
 	margin: 0 auto;
 	border-radius: 4px;
-}
-
-/*----------------------------------------------------------------------------------------
-									Aside style
-----------------------------------------------------------------------------------------*/ 
-#aside {
-	width: 25%;
-	background-color: #BFD1E0;
-    opacity: 0.9;
-    border-radius: 10px;
-    color: black;
-	float: left;
+	width: 50%;
 }
 
 /*----------------------------------------------------------------------------------------
 									Footer
 ----------------------------------------------------------------------------------------*/ 
 .welcome {
-	display: block;
+	display: flex;
 	position: fixed;
     background-color: #BFD1E0;
     bottom: 10px;
     right: 10px;
-    float: right
+	flex-direction: column;
 }
 
 footer p {
     font-size: 12px;
+}
+
+/*---------------------------------------------------------------------------------------
+				Resizes for MEDIUM screens (width between 768px and 992px) 
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 992px) {
+    body {
+    	display: flex
+    	min-width: 100%;
+    }
+
+    header {
+    	display: flex;
+    	flex-direction: column;
+    	min-width: 100%;
+    	min-width: 100%;
+    }
+
+    #wrapper { /* Has #container-header and #container-main as container children */
+		display: flex;
+		flex-direction: column;
+	}
+
+/* Header */
+    #container-header{ /* Children divs of #container-header for Flexbox are #logo, #tagline, #nav-div, #login */
+  		width: 100%;
+    	display_ flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	align-items: center;
+    }
+/* End of Header */	
+
+/* Main */
+	#container-main {  /* Container of #article and #aside */
+		flex-direction: row;
+		width: 100%;
+	}
+
+    #article {
+    	width: 75%;
+    }
+
+    #aside {
+    	width: 25%;
+    }
+
+    .notable_user
+
+    .aside_img {
+    	width: 20%;
+    	display: inline;
+    	float: left;
+    }
+/* End of Main */    
+}
+
+/*--------------------------------------------------------------------------------------- 
+						Resizes for SMALL screens (max width 768px) 
+----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+    body {
+    	display: inline;
+    	min-width: 100%;
+    }
+
+    header {
+    	display: flex;
+    	flex-direction: column;
+    	min-width: 100%;
+    	min-height: 100%;
+    }
+
+    #wrapper { /* Has #container-header and #container-main as container children */
+		display: flex;
+		flex-direction: column;
+	}
+
+    #container-header{ /* Children divs for Flexbox are #logo, #tagline, #nav-div, #login */
+ 		width: 100%;
+    	display_ flex;
+    	flex-direction: row;
+    	flex-wrap: wrap;
+    	align-items: center;
+    }
+
+    #container-main {  /* Container of #article and #aside */
+		display: flex;
+		flex-direction: row;
+	}
+
+    #article {
+    	min-width: 100%;
+    	flex-direction: column;
+    }
+
+    #aside {
+    	min-width: 100%;
+       	flex-direction: column;
+    }
 }
