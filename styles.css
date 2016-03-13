@@ -336,8 +336,7 @@ footer p {
     header {
     	display: flex;
     	flex-direction: column;
-    	min-width: 100%;
-    	min-width: 100%;
+    	width: 100%;
     }
 
     #wrapper { /* Has #container-header and #container-main as container children */
@@ -348,27 +347,31 @@ footer p {
 /* Header */
     #container-header{ /* Children divs of #container-header for Flexbox are #logo, #tagline, #nav-div, #login */
   		width: 100%;
-    	display_ flex;
-    	flex-direction: row;
+    	display: flex;
+    	flex-direction: column;
     	flex-wrap: wrap;
-    	align-items: center;
+    	justify-content: center;
     }
 /* End of Header */	
 
 /* Main */
 	#container-main {  /* Container of #article and #aside */
-		flex-direction: row;
 		width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 	}
 
     #article {
-    	width: 75%;
+    	width: 80%;
+        flex-direction: column;
     }
 
     #aside {
-    	width: 25%;
+    	width: 80%;
+        flex-direction: column;
     }
-
+    
     .notable_user
 
     .aside_img {
@@ -402,7 +405,7 @@ footer p {
 
     #container-header{ /* Children divs for Flexbox are #logo, #tagline, #nav-div, #login */
  		width: 100%;
-    	display_ flex;
+    	display: flex;
     	flex-direction: row;
     	flex-wrap: wrap;
     	align-items: center;
@@ -410,16 +413,14 @@ footer p {
 
     #container-main {  /* Container of #article and #aside */
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 
     #article {
-    	min-width: 100%;
-    	flex-direction: column;
+    	width: 100%;
     }
 
     #aside {
-    	min-width: 100%;
-       	flex-direction: column;
+    	width: 100%;
     }
 }
