@@ -249,15 +249,38 @@ p {
     background-color: white;
 }
 
+/* Post a status div and reply div */
+#post-status-button-div, #button-reply, .hidden, #statuspost, #reply-form {
+    text-align: center;
+    vertical-align: middle; 
+    font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    line-height: 140%;
+    font-size: 13px;
+}
+
+/* Post a status button */
+#post-status-btn {
+    text-align: center;
+    vertical-align: middle; 
+    font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    line-height: 140%;
+    font-size: 13px;
+}
+
+/* Submit status and reply hidden forms */
+#statuspost, #reply-form {
+     line-height: 200%; /* Creates space between lines */
+}
+
 #form {
 	visibility: hidden;
+    text-align: center;
 }
 
 .form-reply {
 }
 
 #data-form-id{
-
 }
 
 .hidden {
@@ -268,6 +291,7 @@ p {
 	float: center;
 }
 
+/* Aside style */
 #sophie_name_aside {
 	text-align: left;
 }
@@ -281,6 +305,7 @@ p {
 ----------------------------------------------------------------------------------------*/ 
 .article_img, .sophie_post {
 	display: inline-block;
+    width: 20%;
 	float: left;
 	padding: 20px;
 	border-radius: 10px;
