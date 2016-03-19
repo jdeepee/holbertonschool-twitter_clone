@@ -250,7 +250,7 @@ p {
 }
 
 /* Post a status div and reply div */
-#post-status-button-div, #button-reply, .hidden, #statuspost, #reply-form {
+.post-status-button-div, .button-reply, .hidden, #statuspost, .reply-form {
     text-align: center;
     vertical-align: middle; 
     font-family: 'Josefin Sans', ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
@@ -268,7 +268,7 @@ p {
 }
 
 /* Submit status and reply hidden forms */
-#statuspost, #reply-form {
+#statuspost, .reply-form {
      line-height: 200%; /* Creates space between lines */
 }
 
