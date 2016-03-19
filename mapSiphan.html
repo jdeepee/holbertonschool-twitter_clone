@@ -13,6 +13,97 @@
   <script type="text/javascript" charset="UTF-8"
     src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
 </head>
+<<<<<<< HEAD
+
+<body>
+  <div id="map" style="width: 100%; height: 100%; position: absolute; background: grey" />
+  
+  <script  type="text/javascript" charset="UTF-8" >
+    
+/**
+ * Moves the map to display over San Francisco
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+function moveMapToSanFrancisco(map){
+  map.setCenter({lat:37.792085, lng:-122.399368});
+  map.setZoom(16);
+}
+
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+var platform = new H.service.Platform({
+  app_id: 'ZfeaAg8LKAgClhTPThp7',
+  app_code: 'Q1oquQpkGI2QvmyNuFfHMQ',
+  useCIT: true,
+  useHTTPS: true
+});
+var defaultLayers = platform.createDefaultLayers();
+
+//Step 2: initialize a map  - not specificing a location will give a whole world view.
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map);
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+      
+// The infamous zoom rectangle - it's actually 5 lines!
+var name = 'Zoomrectangle';
+var control = new H.ui.ZoomRectangle();
+ui.addControl (name, control);
+var zoomrectangle = ui.getControl('Zoomrectangle');
+zoomrectangle.setAlignment('right-middle');
+
+// Now use the map as required
+moveMapToSanFrancisco(map);
+      
+// Add window resize listener to adjust the map dimensions.
+window.addEventListener('resize', function() {
+  map.getViewPort().resize();
+}); 
+
+/* Add map context menu event listener. contextmenu
+ * Convert the screen coordinates {x, y} to geographical coordinates {latitude, longitude}
+ */
+      
+map.addEventListener('contextmenu', function(e) {
+  var coord = map.screenToGeo(e.viewportX, e.viewportY);
+  var rgcParams = {
+    prox: coord.lat + ", " + coord.lng,
+    mode: 'retrieveAddresses',
+    maxresults: 1
+  };
+  // Send the RGC request over.
+  gc.reverseGeocode(rgcParams, function(result) {
+    onRGCResult(result, e);
+  }, function(error) {
+    console.log(error);
+  });
+  // Processes reverse geocoder response and adds a context menu item showing the associated address.
+  function onRGCResult(result, e) {
+    var addressLabel = result.Response.View[0].Result[0]; // Find the response JSON path to get the address label.
+    e.items.push(new H.util.ContextItem({ // // TODO: add the address label as a context menu item.
+      label: addressLabel.Location.Address.Label
+    }));
+    e.currentTarget.dispatchEvent(e);  // Dispatch the context menu event again for all attached listeners to act with new added item(s).
+    e.stopPropagation(e);
+  }
+});
+     
+  </script>
+  
+</body>
+
+</html>
+=======
 <body>
 <div id="map" style="width: 100%; height: 100%; position: absolute;" />
 <script  type="text/javascript" charset="UTF-8" >
@@ -102,3 +193,4 @@ map.addEventListener('contextmenu', function(e) {
 }
 </body>
 </html>
+>>>>>>> 0e2cbb424177bed3f12451e9ec6332b00130a17f
