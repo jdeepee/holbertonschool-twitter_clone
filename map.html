@@ -13,6 +13,7 @@
   <script type="text/javascript" charset="UTF-8"
     src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
 </head>
+<<<<<<< HEAD
 
 <body>
   <div id="map" style="width: 100%; height: 100%; position: absolute; background: grey" />
@@ -102,3 +103,94 @@ map.addEventListener('contextmenu', function(e) {
 </body>
 
 </html>
+=======
+<body>
+<div id="map" style="width: 100%; height: 100%; position: absolute;" />
+<script  type="text/javascript" charset="UTF-8" >
+    
+function moveMap(map){
+  map.setCenter({lng: -122.3993679, lat: 37.792085});
+  map.setZoom(16);
+}
+
+var platform = new H.service.Platform({
+  'app_id': 'wJ4z4eJ7mogap4xsEcGE',
+  'app_code': '3aYq8jn_lIYgh6UmerbXrg',
+  useCIT: true,
+  useHTTPS: true
+});
+
+var defaultLayers = platform.createDefaultLayers();
+
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map);
+
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+ui.addControl('zoomrectangle', new H.ui.ZoomRectangle());
+var zoomrectangle=ui.getControl('zoomrectangle');
+zoomrectangle.setAlignment('right-middle');
+
+moveMap(map);
+
+function fixPageXY(e) {
+  if (e.pageX == null && e.clientX != null ) {
+    var html = document.documentElement
+    var body = document.body
+    e.pageX = e.clientX + (html.scrollLeft || body && body.scrollLeft || 0)
+    e.pageX -= html.clientLeft || 0
+    e.pageY = e.clientY + (html.scrollTop || body && body.scrollTop || 0)
+    e.pageY -= html.clientTop || 0
+  }
+}
+
+var pxl = 0;
+var pyl = 0;
+
+document.onmousemove = function(e) {
+  e = e || window.event
+  fixPageXY(e)
+  pxl = e.pageX;
+  pyl = e.pageY;
+}
+
+map.addEventListener('contextmenu', function(e) {
+  var coord = map.screenToGeo(pxl, pyl);
+  var ny = pyl.toString();
+  var nx = pxl.toString();
+  var proxvar = coord.lat+","+coord.lng+",150";
+  var reverseGeocodingParameters = {
+      prox: proxvar,
+      mode: 'retrieveAddresses',
+      maxresults: 1
+  };
+  var geocoder = platform.getGeocodingService();
+  var addresstoprint = "";
+  var preaddresstoprint = "";
+
+  geocoder.reverseGeocode(reverseGeocodingParameters, function(result) {
+    onResult(result, e);
+  }, function(error) {
+    console.log(error);
+  });
+
+  var onResult = function(result, e) {
+    if (addresstoprint == preaddresstoprint ){
+      preaddresstoprint = addresstoprint;
+      var location = result.Response.View[0].Result[0];
+      addresstoprint = location.Location.Address.Label;
+      e.items.push(new H.util.ContextItem({
+        label: addresstoprint,
+        callback: null
+       })); 
+      e.currentTarget.dispatchEvent(e);
+      e.stopPropagation();
+    }
+  }
+});
+</script>
+}
+</body>
+</html>
+>>>>>>> 0e2cbb424177bed3f12451e9ec6332b00130a17f
