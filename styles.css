@@ -86,11 +86,14 @@ h2 {
 
 h3 {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 16px;
+    line-height: 165%;
+    text-align: left;
 }
 
 h4 {
-	font-size: 20px;
+	font-size: 16px;
+    text-align: left;
 }
 
 h5 {
@@ -102,7 +105,7 @@ p {
     text-indent: 20px;
     text-align: justify;
     line-height: 140%;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 /*----------------------------------------------------------------------------------------
@@ -228,7 +231,7 @@ p {
 
 #aside {
 	width: 25%;
-	background-color: #BFD1E0;
+	background-color: #96CEFF;
     opacity: 0.9;
     border-radius: 10px;
     color: black;
@@ -291,6 +294,18 @@ p {
 	float: center;
 }
 
+/* See more statuses button */
+#extra_statuses {
+     text-align: center;
+}
+
+#button-load {
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: #96CEFF;
+}
+
 /* Aside style */
 #sophie_name_aside {
 	text-align: left;
@@ -304,15 +319,11 @@ p {
 									Article & Aside pictures
 ----------------------------------------------------------------------------------------*/ 
 .article_img, .sophie_post {
-	display: inline-block;
-    width: 20%;
+	display: block;
+    width: 10%;
 	float: left;
 	padding: 20px;
 	border-radius: 10px;
-}
-
-.article_img {
-	clear: left;
 }
 
 .sophie_post {
@@ -322,15 +333,10 @@ p {
 }
 
 .aside_img {
-	width: auto;
-	margin: 0 auto;
-}
-
-.aside_img {
 	display: block;
 	margin: 0 auto;
 	border-radius: 4px;
-	width: 50%;
+	width: 30%;
 }
 
 /*----------------------------------------------------------------------------------------
@@ -400,9 +406,10 @@ footer p {
     .notable_user
 
     .aside_img {
-    	width: 20%;
+    	width: 10%;
     	display: inline;
     	float: left;
+        margin: 10px;
     }
 /* End of Main */    
 }
