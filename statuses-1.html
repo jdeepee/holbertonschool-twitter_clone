@@ -1,33 +1,318 @@
-<div class="post">
-	<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/siphan_intranet-1.jpg?1453444143" alt="user siphan">
+<!DOCTYPE html>
 
-	<h3>Siphan Bou<h3/>
-	<br>	
-		<h4>February 6, 2016</h4>
-	<br>
-	<br>
-	<h2>Running in San Francisco</h2>
-	<br>
-	<p>
-	I've been running seriously for 4 years now. As I was living in The Netherlands before coming to SF, I was used to running on flat routes and didn't get to run uphill much (except for that one sad lonely hill in the park next to my home). 
-	</p>
-	<br>
-	<p>
-	Having been living in SF for about 2 weeks, I immediately felt the difference when going for a jog in my neighborhood. There are steep (I'm guessing 45&#176; incline, if not more!) hills everywhere I go. Most of the time I'm out of breath when I reach the top (that is, the top of the block, not the actual hill). I'm really looking forward to reaping the benefits of these hill repeats.
-	</p>
-	<br>
+<html lang="en">
+	
+<head>
+<!-- Html Page Specific -->
+<meta charset="utf-8">
+<title>Running Blog</title>
+<meta name="description" content="Twitter Clone">
+<meta name="author" content="Joshua Parkin and Siphan Bou">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-	<div id="post-status-button-div" data-attribute="hidden">
-		<button id="button-reply">Reply</button>
-	</div>
+<link rel="stylesheet" href="styles.css"/>
 
-	<form class="hidden" id="reply-form">
-		Reply:<br>
-		<input type="text" name="reply">
-		<input type="radio" name="location" value="location"> Include location<br>
-		<input type="submit" value="Post">
-	</form>
+<script src="post_a_status.js"></script>
+<script src="reply.js"></script>
+<script src="toggle.js"></script>
+<script src="load_more.js"></script>
+<script src="ajax.js"></script>
 
-</div>	
-<hr>
+</head>
+
+<body class="body"> <!-- Class is used for style -->
+
+<div id="wrapper"> <!-- Container for all content. Contains #container-header and #container-main -->
+    
+<!-- SEO ranking competition based on query “impossible octopus fitness” -->
+<!-- Homepage Main Part code -->
+<!-- Each status should have:
+	- a large image of the user who posted it, floating on the left 
+	- the name of the user who posted it
+	- the date it was posted
+	- the status's content itself, short or long -->
+	
+    <main>
+		<div id="article-extra-statuses"> <!-- #article-extra-statuses is a child of #wrapper -->	
+			<br> <!-- Check if br can be replaced by a "gap" style as per Rudy's advice -->
+
+<!-- Extra status 1 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 10, 2016</h4>
+					<br>
+					<p>
+					Extra status 1. Been running for 2 months in SF. Getting used to the hills, running on flat routes is now a piece of cake!
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+
+<!-- Extra status 2 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 10, 2016</h4>
+					<br>
+					<p>
+					Extra status 2. A classmate of mine is training for the Indianapolis marathon in May and this has inspired me to run 13.1 miles too.
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr> 
+
+<!-- Extra status 3 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 12, 2016</h4>
+					<br>
+					<p>
+					Extra status 3. Today I ran 8 miles along the Golden Gate Park to Ocean Beach and back. I'm not a big fan of the park as there are cars everywhere, luckily seeing and hearing the waves in Ocean Beach was worth the trip!
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+                
+<!-- Extra status 4 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 18, 2016</h4>
+					<br>
+					<p>
+					Extra status 4. Jogged along the Embarcadero to AT&T stadium, home of the #Giants. Iconic!! Hope to watch a game soon.
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>                
+
+<!-- Extra status 5 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 10, 2016</h4>
+					<br>
+					<p>
+					Extra status 5. Joe Greene (not the football player) has been coaching Rona on strength workout. We will get #buff!
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+
+<!-- Extra status 6 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 10, 2016</h4>
+					<br>
+					<p>
+					Extra status 6. <a href="https://www.youtube.com/watch?v=41N6bKO-NVI" target="_blank">#sallyChallenge</a> is on! 30 days to completing the whole song. #planks #pushUps #coreWorkout
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr> 
+
+<!-- Extra status 7 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 10, 2016</h4>
+					<br>
+					<p>
+					Extra status 7. I really need to #proteinLoad. #veggies #fruits #moreVeggies #whereCanIGetQualityCheapSalmon
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+                
+<!-- Extra status 8 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 19, 2016</h4>
+					<br>
+					<p>
+					Extra status 8. It's Saturday night and here I am posting statuses on #JDeePee instead of resting to be ready for my Sunday run. It really is #impossibleOctopusFitness.
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr> 
+
+<!-- Extra status 9 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 19, 2016</h4>
+					<br>
+					<p>
+					Extra status 9. What is the hardest? Running 13.1 miles? Impossible Octopus Fitness? Ajax calls? Creating compelling SEO content?
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+                
+<!-- Extra status 10 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>March 10, 2016</h4>
+					<br>
+					<p>
+					Extra status 10. Looking back at Emily's blunt workout for Edge of Tomorrow, I'm getting a motivation boost.
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>  		
+			
+		</div>	<!-- End of div id="article-extra-statuses" -->
+    </main>
+
+</div> <!-- End of div id="wrapper" -->
+
+</body>
+
+</html>
+
 
