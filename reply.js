@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-	var reply = document.querySelectorAll('.button-reply'); // find all elements with reply id
+// document.addEventListener(function() {    
+	var reply = document.querySelectorAll('.button-reply'); // find all elements with reply class
 	var r = 0, r_length = reply.length; // create & set new vars to 0 and to number of reply btns (length)
 		for (r; r < r_length; r++) { // iterates through all reply btns adding event listeners to each
 		reply[r].addEventListener('click', function() { // when click is heard do the following:

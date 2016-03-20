@@ -66,17 +66,20 @@
 		<div id="container-main"> <!-- #container-main is a child of #wrapper -->	
 			<br> <!-- Check if br can be replaced by a "gap" style as per Rudy's advice -->
 			<div id="article">
-
+	            <br>
 				<h1>Impossible octopus fitness</h1>
 				<br>
 				<p>
 				Welcome to JDeePee, the Twitter for runners, fitness and octopuss lovers.
 				</p>	
 				<br>
+                <br>
+                <br>
 
+<!-- Post a new status button -->                  
 				<div class="ask-post-status" id="ask-post-status">
 					<div class="post-status-button-div">
-						<button id="post-status-btn">Post</button>
+						<button id="post-status-btn">Post a status</button>
 					</div>
 
 					<form class="hidden" id="statuspost">
@@ -86,7 +89,19 @@
 						<input type="submit" value="Post">
 					</form>
 				</div>
+                <br>
+				<hr>
 
+                
+<!-- Load more statuses button. Extra statuses are in statuses-1.html -->
+<!-- This is "a call-to-action, so marketing-wise, you want the user to want to click there in priority; don't be shy with contrast and affordance" -->                
+				<br>
+                <div id="extra_statuses">
+					<button id="button-load">See more statuses</button>
+				</div>
+
+                
+<!----------------------------------------- Statuses ------------------------------------>             
 <!-- Status 1 -->                   
 				<div class="post">
 					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
@@ -347,15 +362,8 @@
 					</form>
 					
 				</div>	
-                <hr>
-
-<!-- Load more statuses button. Extra statuses are in statuses-1.html -->                
-				<div id="extra_statuses">
-					<button id="button-load">See more statuses</button>
-				</div>
-                <br>
-				<hr>	
-                
+                <hr>	
+<!----------------------------------------- End of Statuses ------------------------------------>                 
 			</div> <!-- End of div id="article" -->
 			
 
