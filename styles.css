@@ -248,7 +248,7 @@ p {
 .post, .notable_user {
 	display: inline-block;
 	border-radius: 5px;
-	padding: 20px;
+	padding: 10px;
 }
 
 .notable_user p {
