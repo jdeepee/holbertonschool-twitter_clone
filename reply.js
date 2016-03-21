@@ -1,4 +1,4 @@
-function reply() {
+// Need to make reply button work with extra statuses
 document.addEventListener("DOMContentLoaded", function() {
 // document.addEventListener(function() {    
 	var reply = document.querySelectorAll('.button-reply'); // find all elements with reply class
@@ -12,4 +12,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 });
-}
+
