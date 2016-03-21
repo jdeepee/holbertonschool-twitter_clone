@@ -11,8 +11,7 @@ function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 argu
 	    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
 	    {
 	        onSuccess(xmlhttp.responseText); // onSuccess: a callback that will run after the call was successfully performed and that expects one argument; a string that contains what's in the file that was just fetched
-	    }
-	reply();     
+	    }  
 	}
 	xmlhttp.open('GET', url, true); // url: a string that contains the local URL to be calling
 
@@ -22,3 +21,5 @@ function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 argu
   		buttonId.style.cursor = "default";
   	}, 2000);
 }
+
+// Reply button needs to work with extra statuses as well. Research what changes need be made to Ajax call for this to work.
