@@ -1,3 +1,4 @@
+function reply() {
 document.addEventListener("DOMContentLoaded", function() {
 // document.addEventListener(function() {    
 	var reply = document.querySelectorAll('.button-reply'); // find all elements with reply class
@@ -11,3 +12,4 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 	}
 });
+}
