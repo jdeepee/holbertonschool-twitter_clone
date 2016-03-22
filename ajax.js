@@ -11,12 +11,8 @@ function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 argu
 	    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
 	    {
 	        onSuccess(xmlhttp.responseText); // onSuccess: a callback that will run after the call was successfully performed and that expects one argument; a string that contains what's in the file that was just fetched
-<<<<<<< HEAD
 	    	reply(); // calling reply function again after extra statuss are loaded so that reply button works on them too
 	    }    
-=======
-	    }  
->>>>>>> acda82abdbf9a7bcfe06565af3c85fd0ecb1a7f9
 	}
 	xmlhttp.open('GET', url, true); // url: a string that contains the local URL to be calling
 
