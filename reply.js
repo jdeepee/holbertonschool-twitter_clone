@@ -1,6 +1,5 @@
-// Need to make reply button work with extra statuses
-document.addEventListener("DOMContentLoaded", function() {
-// document.addEventListener(function() {    
+document.addEventListener("DOMContentLoaded", reply) // callback function reply is called after page loaded so that reply button works
+function reply() { // defines reply function
 	var reply = document.querySelectorAll('.button-reply'); // find all elements with reply class
 	var r = 0, r_length = reply.length; // create & set new vars to 0 and to number of reply btns (length)
 		for (r; r < r_length; r++) { // iterates through all reply btns adding event listeners to each
@@ -11,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		parent.toggle();
 		});
 	}
-});
+};
+
 
