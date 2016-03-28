@@ -114,8 +114,9 @@ p {
 
 #header {
 	background-color: black;
-    color: white;
+    color: #06B6FF; /* Changed color from white as white font would not work for accessibility */
     height: 170px;
+   	font-weight: bold;
 }
 
 #container-header { /* Children divs for Flexbox are #logo, #tagline, #nav-div, #login */
@@ -135,6 +136,10 @@ p {
 
 #tagline { /* Child div of #container-header */
 	align-self: flex-end;
+}
+
+#tagline p { /* Child div of #container-header */
+	font-size: 20px;
 }
 
 #image {
@@ -245,19 +250,23 @@ p {
 	overflow-y: auto;
 }
 
-.post, .notable_user {
+.post, .notable_user, .welcome {
 	display: inline-block;
 	border-radius: 5px;
 	padding: 10px;
+}
+
+.post {
+    margin: 25px;
+    background-color: white;
 }
 
 .notable_user p {
 	font-size: 12px;
 }
 
-.post {
-    margin: 25px;
-    background-color: white;
+.welcome p {
+	color: #960000;
 }
 
 /* Post a status div and reply div */
@@ -350,18 +359,61 @@ p {
 /*----------------------------------------------------------------------------------------
 									Footer
 ----------------------------------------------------------------------------------------*/ 
-.welcome {
-	display: flex;
-	position: fixed;
-    background-color: #BFD1E0;
-    bottom: 10px;
-    right: 10px;
-	flex-direction: column;
+#footer {
+	background-image: url(dark-background-footer.jpg);
+    color: #06B6FF; /* Font color cannot be white as this would not work for accessibility */
+    height: 170px;
+   	font-weight: bold;
+	display: flex; 
+	flex-direction: row;
+	justify-content: space-around;
 }
 
-footer p {
-    font-size: 12px;
+#footer-links-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80%;
+    align-items: center;
 }
+
+.footer-links {
+	display: flex;
+	flex-direction: column;	
+	justify-content: space-around;
+	align-content: center;
+	padding: 7px;
+	margin: 20px;
+	border:1px solid #fff;
+	border-radius: 2px;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(red, orange); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(red, orange); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bred, orange); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(red, orange); /* Standard syntax */
+}
+
+.footer-links a{
+    padding:10px;
+}
+
+.footer-links {
+
+}
+
+.footer-links:hover {
+	background: orange; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(orange, red); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(orange, red); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(orange, red); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(orange, red); /* Standard syntax */
+	-o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
 
 /*---------------------------------------------------------------------------------------
 				Resizes for MEDIUM screens (width between 768px and 992px) 
