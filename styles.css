@@ -111,13 +111,13 @@ p {
 #header {
 	background-color: black;
     color: #06B6FF; /* Changed color from white as white font would not work for accessibility */
-    height: 170px;
+    height: 220px;
    	font-weight: bold;
 }
 
 #container-header { /* Children divs for Flexbox are #logo, #tagline, #nav-div, #login */
 	background-image: url(header-image.jpg);
-	height: 170px;
+	height: 100%;
 	display: flex; 
 	flex-direction: row;
 	justify-content: space-around;
@@ -136,6 +136,8 @@ p {
 
 #tagline p { /* Child div of #container-header */
 	font-size: 20px;
+	color: #1F3A93;
+	font-weight: bolder;
 }
 
 #image {
@@ -358,18 +360,19 @@ p {
 #footer {
 	background-image: url(dark-background-footer.jpg);
     color: #06B6FF; /* Font color cannot be white as this would not work for accessibility */
-    height: 170px;
+    height: 100px;
    	font-weight: bold;
 	display: flex; 
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
 }
 
 #footer-links-div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 80%;
+    height: 50%;
     align-items: center;
 }
 
@@ -394,7 +397,6 @@ p {
 }
 
 .footer-links {
-
 }
 
 .footer-links:hover {
@@ -410,6 +412,9 @@ p {
 	transition: all 1s ease-in-out;
 }
 
+#footer-links-div li {
+	color: #06B6FF; /* Font color cannot be white as this would not work for accessibility */
+}
 
 /*---------------------------------------------------------------------------------------
 				Resizes for MEDIUM screens (width between 768px and 992px) 
