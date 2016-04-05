@@ -12,11 +12,85 @@
 
 <link rel="stylesheet" href="styles.css"/>
 
-<script src="post_a_status.js"></script>
-<script src="reply.js"></script>
-<script src="toggle.js"></script>
-<script src="load_more.js"></script>
-<script src="ajax.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function() { 
+	document.getElementById("post-status-btn").addEventListener("click", postpre);
+	function postpre() { // call toggle function on poststatusbtn
+		var elem = document.getElementById('statuspost');
+		elem.toggle(); // call toggle on div containing new status post
+		var elem = document.getElementById('post-status-btn');
+		elem.toggle();
+	}
+});
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", reply) // callback function reply is called after page loaded so that reply button works
+function reply() { // defines reply function
+	var reply = document.querySelectorAll('.button-reply'); // find all elements with reply class
+	var r = 0, r_length = reply.length; // create & set new vars to 0 and to number of reply btns (length)
+		for (r; r < r_length; r++) { // iterates through all reply btns adding event listeners to each
+		reply[r].addEventListener('click', function() { // when click is heard do the following:
+		var parent = this.closest('.post-status-button-div');  // set target 1 for toggling
+		var post = this.parentNode.nextElementSibling; // set target 2 for toggle
+		post.toggle(); 
+		parent.toggle();
+		});
+	}
+};
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() { // wait til page is loaded
+	HTMLElement.prototype.toggle = function() { 
+	   if (this.classList.contains("hidden")) { // if element is hidden, remove hidden.
+	    this.classList.remove('hidden');
+	  } else {
+	    this.classList.add('hidden'); // else add hidden
+	  }
+	}
+});
+</script>
+
+<script>
+	// Function to factorize AJAX request and response
+function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 arguments (url, onSuccess)
+ 	var buttonId = document.getElementById("button-load"); // defines what happens to button-load
+  	buttonId.disabled = "true"; // button-load gets disabled during time out after click
+  	buttonId.style.cursor = "text"; // cursor changes so user knows it's unclickable
+  	buttonId.style.background = "#CDFFCB"; // button-load changes color when clicked
+
+ 	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() // For the Ajax call, use the method that uses readyState, because it's the only way to be compatible with IE8
+	{
+	    if(xmlhttp.readyState == 4 && xmlhttp.status == 200)
+	    {
+	        onSuccess(xmlhttp.responseText); // onSuccess: a callback that will run after the call was successfully performed and that expects one argument; a string that contains what's in the file that was just fetched
+	    	reply(); // calling reply function again after extra statuses are loaded so that reply button works on them too
+	    }    
+	}
+	xmlhttp.open('GET', url, true); // url: a string that contains the local URL to be calling
+
+	setTimeout(function(){ // set 2 sec time out before Ajax call is made, ie when user clicks on button-load, time out for 2 sec
+		xmlhttp.send();
+  		buttonId.disabled = false;
+  		buttonId.style.cursor = "default";
+  	}, 2000); // time out set to 2000 ms
+}
+	
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() { 
+	document.getElementById("button-load").addEventListener("click", load_more); // when user clicks on 'See more statuses' button, function load_more is called 
+	function load_more(){
+		ajaxGet('statuses-1.html', function(text) { // an Ajax call is made to the file with path /statuses-1.html
+			document.getElementById("extra_statuses").innerHTML = text; // extra statuses are loaded ie injected  into empty div with ID "extra_statuses" in index.html, using innerHTML
+		});
+	}
+});
+</script>
+
 
 </head>
 
@@ -27,7 +101,7 @@
 		<header id="header">
 			<div id="container-header"> <!-- #container-header is a child of #wrapper -->
 				<div id="logo">
-					<img id="image" src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2/48/100-512.png" alt="running logo">
+					<img id="image" src="100-512-min.png" alt="running logo">
 				</div>
 			
 				<div id="tagline">
@@ -113,7 +187,7 @@
 <!--                 Statuses             -->      
 <!-- Status 1 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine">
+					<img class="article_img" src="q8XtwJ0q-min.jpg" alt="user marine">
 					
 					<h2>Marine Dejean</h2>
 					<h3>March 20, 2016</h3>
@@ -140,7 +214,7 @@
 
 <!-- Status 2 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/046/thumb/bennett_buchanan.jpg?1452814371" alt="user bennett">
+					<img class="article_img" src="bennett_buchanan-min.jpg" alt="user bennett">
 					
 					<h2>Bennett Buchanan</h2>
 					<h3>March 19, 2016</h3>
@@ -167,7 +241,7 @@
 
 <!-- Status 3 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/039/thumb/MyPhoto.JPG?1453394675" alt="user tasneem">
+					<img class="article_img" src="MyPhoto-min.jpeg" alt="user tasneem">
 					
 					<h2>Tasneem Farag</h2>
 					<h3>March 18, 2016</h3>
@@ -194,7 +268,7 @@
                 
 <!-- Status 4 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/040/thumb/DSC_0346112.jpg?1452927709" alt="user bilal">
+					<img class="article_img" src="DSC_0346112-min.jpg" alt="user bilal">
 					
 					<h2>Bilal Barki</h2>
 					<h3>March 17, 2016</h3>
@@ -221,7 +295,7 @@
 
 <!-- Status 5 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/036/thumb/DSC_5872.jpg?1453348252" alt="user praylin">
+					<img class="article_img" src="DSC_5872-min.jpg" alt="user praylin">
 					
 					<h2>Praylin Dinamoni</h2>
 					<h3>March 16, 2016</h3>
@@ -248,7 +322,7 @@
 
 <!-- Status 6 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/033/thumb/small.png?1453392986" alt="user chandler">
+					<img class="article_img" src="small-min.png" alt="user chandler">
 					
 					<h2>Chandler Mayo</h2>
 					<h3>March 15, 2016</h3>
@@ -276,7 +350,7 @@
 
 <!-- Status 7 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/015/thumb/lol.png?1452813537" alt="user ian">
+					<img class="article_img" src="lol-min.png" alt="user ian">
 					
 					<h2>Ian Wagener</h2>
 					<h3>March 14, 2016</h3>
@@ -303,7 +377,7 @@
                 
 <!-- Status 8 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/024/thumb/John_Serrano.jpg?1452893196" alt="user john">
+					<img class="article_img" src="John_Serrano-min.jpg" alt="user john">
 					
 					<h2>John Serrano</h2>
 					<h3>March 13, 2016</h3>
@@ -330,7 +404,7 @@
 
 <!-- Status 9 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/021/thumb/01.jpg?1453328441" alt="user rick">
+					<img class="article_img" src="01-min.jpg" alt="user rick">
 					
 					<h2>Rick Houser</h2>
 					<h3>March 12, 2016</h3>
@@ -357,7 +431,7 @@
                 
 <!-- Status 10 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					<img class="article_img" src="12556012_1568819283442820_1631910762_n-min.jpg" alt="user siphan">
 					
 					<h2>Siphan Bou</h2>
 					<h3>March 10, 2016</h3>
@@ -393,7 +467,7 @@
 		<div id="aside">	
 
 			<div class="notable_user">
-				<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/047/thumb/nomipic.jpg?1453877446" alt="user sophie"/>
+				<img class="aside_img" src="nomipic-min.jpg" alt="user sophie"/>
 					<h4>Sophie Rigault-Barbier</h4>
 				<br>
 				<p>
@@ -403,7 +477,7 @@
 				<br>
 
 				<div class="notable_user">
-					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/018/thumb/10805743_744774678939939_1422144655117219420_n.jpg?1453449746" alt="user electra"/>
+					<img class="aside_img" src="10805743_744774678939939_1422144655117219420_n-min.jpg" alt="user electra"/>
 						<h4>Electra Chong</h4>
 					<br>
 					<p>
@@ -413,7 +487,7 @@
 				<br>
 
 				<div class="notable_user">
-					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine"/>
+					<img class="aside_img" src="q8XtwJ0q-min.jpg" alt="user marine"/>
 						<h4>Marine Dejean</h4>
 					<br>
 					<p>
@@ -423,7 +497,7 @@
 				<br>
 
 				<div class="notable_user">
-					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/027/thumb/Screen_Shot_2015-12-03_at_10.31.06_AM.jpg?1452827557" alt="user steven"/>
+					<img class="aside_img" src="Screen_Shot_2015-12-03_at_10.31.06_AM-min.jpg" alt="user steven"/>
 						<h4>Steven Garcia</h4>	
 					<br>
 					<p>
