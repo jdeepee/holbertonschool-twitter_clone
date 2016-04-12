@@ -1,3 +1,23 @@
+<?php
+$users = [
+    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
+    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
+    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+  ];
+
+function userExists($login, $password, $users)
+{
+	foreach ($users as $value) {
+		if ($value['login'] == $login) {
+			if ($value['password'] == $password) {
+				return $value["full_name"];
+      			}
+    		}
+	}
+	return false;
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,7 +37,6 @@
 <script src="toggle.js"></script>
 <script src="load_more.js"></script>
 <script src="ajax.js"></script>
-
 </head>
 
 <body class="body"> <!-- Class is used for style -->
@@ -27,11 +46,30 @@
 		<header id="header">
 			<div id="container-header"> <!-- #container-header is a child of #wrapper -->
 				<div id="logo">
-					<img id="image" src="https://cdn4.iconfinder.com/data/icons/fitness-vol-2/48/100-512.png" alt="running logo">
+					<img id="image" src="100-512-min.png" alt="running logo">
 				</div>
 			
 				<div id="tagline">
 					<p>Impossible fitness made possible by running!</p>
+				</div>
+
+				<div>
+				<?php
+					if ($_POST["login"]){
+						if (userExists($_POST["login"], $_POST['password'], $users) == false) {
+                					echo "Hello, there!";
+                					echo "<br>";
+                					echo "<p id='error'>Invalid credentials</p>";
+              					} else {
+                					echo "Hello, " . userExists($_POST["login"], $_POST['password'], $users);
+                					echo "<br>";
+                					echo "Your rot13’d login is: " . str_rot13($_POST["login"]) . ",";
+                					echo " and the length of your login is: " . strlen($_POST["login"]);
+              					}
+            				} else {
+              					echo "Hello, there!";
+            				}
+				?>
 				</div>
 
 				<div id="nav-div">
@@ -113,7 +151,7 @@
 <!--                 Statuses             -->      
 <!-- Status 1 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine">
+					<img class="article_img" src="q8XtwJ0q-min.jpg" alt="user marine">
 					
 					<h2>Marine Dejean</h2>
 					<h3>March 20, 2016</h3>
@@ -140,7 +178,7 @@
 
 <!-- Status 2 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/046/thumb/bennett_buchanan.jpg?1452814371" alt="user bennett">
+					<img class="article_img" src="bennett_buchanan-min.jpg" alt="user bennett">
 					
 					<h2>Bennett Buchanan</h2>
 					<h3>March 19, 2016</h3>
@@ -167,7 +205,7 @@
 
 <!-- Status 3 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/039/thumb/MyPhoto.JPG?1453394675" alt="user tasneem">
+					<img class="article_img" src="MyPhoto-min.jpeg" alt="user tasneem">
 					
 					<h2>Tasneem Farag</h2>
 					<h3>March 18, 2016</h3>
@@ -194,7 +232,7 @@
                 
 <!-- Status 4 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/040/thumb/DSC_0346112.jpg?1452927709" alt="user bilal">
+					<img class="article_img" src="DSC_0346112-min.jpg" alt="user bilal">
 					
 					<h2>Bilal Barki</h2>
 					<h3>March 17, 2016</h3>
@@ -221,7 +259,7 @@
 
 <!-- Status 5 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/036/thumb/DSC_5872.jpg?1453348252" alt="user praylin">
+					<img class="article_img" src="DSC_5872-min.jpg" alt="user praylin">
 					
 					<h2>Praylin Dinamoni</h2>
 					<h3>March 16, 2016</h3>
@@ -248,7 +286,7 @@
 
 <!-- Status 6 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/033/thumb/small.png?1453392986" alt="user chandler">
+					<img class="article_img" src="small-min.png" alt="user chandler">
 					
 					<h2>Chandler Mayo</h2>
 					<h3>March 15, 2016</h3>
@@ -276,7 +314,7 @@
 
 <!-- Status 7 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/015/thumb/lol.png?1452813537" alt="user ian">
+					<img class="article_img" src="lol-min.png" alt="user ian">
 					
 					<h2>Ian Wagener</h2>
 					<h3>March 14, 2016</h3>
@@ -303,7 +341,7 @@
                 
 <!-- Status 8 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/024/thumb/John_Serrano.jpg?1452893196" alt="user john">
+					<img class="article_img" src="John_Serrano-min.jpg" alt="user john">
 					
 					<h2>John Serrano</h2>
 					<h3>March 13, 2016</h3>
@@ -330,7 +368,7 @@
 
 <!-- Status 9 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/021/thumb/01.jpg?1453328441" alt="user rick">
+					<img class="article_img" src="01-min.jpg" alt="user rick">
 					
 					<h2>Rick Houser</h2>
 					<h3>March 12, 2016</h3>
@@ -357,7 +395,7 @@
                 
 <!-- Status 10 -->
                 <div class="post">
-					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					<img class="article_img" src="12556012_1568819283442820_1631910762_n-min.jpg" alt="user siphan">
 					
 					<h2>Siphan Bou</h2>
 					<h3>March 10, 2016</h3>
@@ -393,7 +431,7 @@
 		<div id="aside">	
 
 			<div class="notable_user">
-				<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/047/thumb/nomipic.jpg?1453877446" alt="user sophie"/>
+				<img class="aside_img" src="nomipic-min.jpg" alt="user sophie"/>
 					<h4>Sophie Rigault-Barbier</h4>
 				<br>
 				<p>
@@ -403,7 +441,7 @@
 				<br>
 
 				<div class="notable_user">
-					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/018/thumb/10805743_744774678939939_1422144655117219420_n.jpg?1453449746" alt="user electra"/>
+					<img class="aside_img" src="10805743_744774678939939_1422144655117219420_n-min.jpg" alt="user electra"/>
 						<h4>Electra Chong</h4>
 					<br>
 					<p>
@@ -413,7 +451,7 @@
 				<br>
 
 				<div class="notable_user">
-					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine"/>
+					<img class="aside_img" src="q8XtwJ0q-min.jpg" alt="user marine"/>
 						<h4>Marine Dejean</h4>
 					<br>
 					<p>
@@ -423,7 +461,7 @@
 				<br>
 
 				<div class="notable_user">
-					<img class="aside_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/027/thumb/Screen_Shot_2015-12-03_at_10.31.06_AM.jpg?1452827557" alt="user steven"/>
+					<img class="aside_img" src="Screen_Shot_2015-12-03_at_10.31.06_AM-min.jpg" alt="user steven"/>
 						<h4>Steven Garcia</h4>	
 					<br>
 					<p>
