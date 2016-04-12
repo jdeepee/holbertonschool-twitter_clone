@@ -128,25 +128,6 @@ function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 argu
 					<p>Impossible fitness made possible by running!</p>
 				</div>
 
-				<div>
-				<?php
-					if ($_POST["login"]){
-						if (userExists($_POST["login"], $_POST['password'], $users) == false) {
-                					echo "Hello, there!";
-                					echo "<br>";
-                					echo "<p id='error'>Invalid credentials</p>";
-              					} else {
-                					echo "Hello, " . userExists($_POST["login"], $_POST['password'], $users);
-                					echo "<br>";
-                					echo "Your rot13’d login is: " . str_rot13($_POST["login"]) . ",";
-                					echo " and the length of your login is: " . strlen($_POST["login"]);
-              					}
-            				} else {
-              					echo "Hello, there!";
-            				}
-				?>
-				</div>
-
 				<div id="nav-div">
 					<ul class="nav">
 						<li class="nav-buttons"><a href="http://amsterunner.com/" target="_blank" title="Amsterunner">Home</a></li>
@@ -159,7 +140,7 @@ function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 argu
 				<div id="login">
 					<ul class="nav">
 						<li class="edit_log"><a href="https://twitter.com/Sissilacoureuse" target="_blank" title="Twitter Siphan">Edit Profile</a></li> <!-- When user is logged in -->
-						<li class="edit_log"><a href="https://twitter.com/JDeePee" target="_blank" title="Twitter Josh">Logout </a></li> <!-- When user is logged in. Need to create a 'Log in' button when user is not logged in -->
+						<li class="edit_log"><a href="/login.php" title="Login Page">Login</a></li> <!-- When user is logged in. Need to create a 'Log in' button when user is not logged in -->
 					</ul>
 				</div>
 			</div>
@@ -185,6 +166,31 @@ function ajaxGet(url, onSuccess){ // function called ajaxGet that expects 2 argu
 				Welcome to JDeePee, the Twitter for runners, fitness and octopus lovers.
 				</p>	
 				<br>
+				<div>
+					<?php
+						if ($_POST["login"]){
+							if (userExists($_POST["login"], $_POST['password'], $users) == false) {
+	                					echo "<p>Hello, there!</p>";
+	                					echo "<br>";
+	                					echo "<p id='error'>Invalid credentials</p>";
+	              					} else {
+	              						$user = userExists($_POST["login"], $_POST['password'], $users);
+	              						$out = sprintf("<p>Hello, %s</p>", $user);
+	                					echo $out;
+	                					echo "<br>";
+	                					$rot13 = str_rot13($_POST["login"]);
+	                					$out_rot = sprintf("<p>Your rot13’d login is: %s</p>", $rot13);
+	                					echo $out_rot;
+	                					echo "<br>";
+	                					$length = strlen($_POST["login"]);
+	                					$length_out = sprintf("<p>The length of your login is: %s</p>", $length);
+	                					echo $length_out;
+	              					}
+	            				} else {
+	              					echo "<p>Hello, there!</p>";
+	            				}
+					?>
+				</div>
                 <br>
                 <br>
 
