@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	
+<head>
+<!-- Html Page Specific -->
+<meta charset="utf-8">
+<title>Running Blog</title>
+<meta name="description" content="Twitter Clone">
+<meta name="author" content="Joshua Parkin and Siphan Bou">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="styles.css"/>
+
+<script src="post_a_status.js"></script>
+<script src="reply.js"></script> 
+<script src="toggle.js"></script>
+<script src="load_more.js"></script>
+<script src="ajax.js"></script>
+
+</head>
+
+<body class="body"> <!-- Class is used for style -->
+
+<div id="wrapper"> <!-- Container for all content. Contains #container-header and #container-main -->
+    
+<!-- SEO ranking competition based on query “impossible octopus fitness” -->
+<!-- Homepage Main Part code -->
+<!-- Each status should have:
+	- a large image of the user who posted it, floating on the left 
+	- the name of the user who posted it
+	- the date it was posted
+	- the status's content itself, short or long -->
+	
+    <main>
+		<div id="article-extra-statuses"> <!-- #article-extra-statuses is a child of #wrapper -->	
+			<br> <!-- Check if br can be replaced by a "gap" style as per Rudy's advice -->
+
+<!-- Extra status 1 -->                   
+				<div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>	
+					<h4>February 6, 2016</h4>
+					<br>
+					<p>
+					Running in San Francisco. I've been running seriously for 4 years now. As I was living in The Netherlands before coming to SF, I was used to running on flat routes and didn't get to run uphill much (except for that one sad lonely hill in the park next to my home). 
+					</p>
+					<br>
+
+                    <!-- Reply button & form -->                    
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form> 
+				</div>	
+				<hr>
+
+<!-- Extra status 2 -->
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/035/thumb/12556012_1568819283442820_1631910762_n.jpg?1458455032" alt="user siphan">
+					
+					<h3>Siphan Bou</h3>
+					<h4>February 6, 2016</h4>
+					<br>
+					<p>
+					Having been living in SF for about 2 weeks, I immediately felt the difference when going for a jog in my neighborhood. There are steep (I'm guessing 45&#176; incline, if not more!) hills everywhere I go. Most of the time I'm out of breath when I reach the top (that is, the top of the block, not the actual hill). I'm really looking forward to reaping the benefits of these hill repeats.
+					</p>
+					<br>
+                    
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+
+<!-- Extra status 3 -->                
+				<div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/014/thumb/me.jpg?1453569803" alt="user josh"/>
+						<h3>Josh Parkin</h3>
+						<h4>February 5, 2016</h4>
+					<br>	
+					<p>
+					Running on treadmills. Since I am a night owl, I prefer to run in the evening so running on a treadmill is more convenient for me as it's safer.
+					</p>
+					<br>
+
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+
+<!-- Extra status 4 -->                
+			<div class="post">
+				<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/047/thumb/nomipic.jpg?1453877446" alt="user sophie"/>
+				<h3>Sophie Rigault-Barbier</h3>
+				<h4>February 4, 2016</h4>
+				<br>
+				<p>
+					Training for San Francisco half marathon. It all started again in 2008 when I wanted to go back to sports but didn’t want to spend too much money in fitness club. Thereby I decided to challenge myself and ask a friend to train with me at running: only running shoes and fresh air – that was a good goal. 
+				</p>
+				<br>
+
+                <!-- Reply button & form -->  
+				<div class="post-status-button-div" data-attribute="hidden">
+					<button class="button-reply">Reply</button>
+				</div>
+
+				<form class="hidden reply-form">
+					Reply:<br>
+					<input type="text" name="reply">
+					<input type="radio" name="location" value="location"> Include location<br>
+					<input type="submit" value="Post">
+				</form>
+
+			</div>	
+				<hr>	
+
+<!-- Extra status 5 -->                
+			<div class="post">
+				<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/047/thumb/nomipic.jpg?1453877446" alt="user sophie"/>
+				<h3>Sophie Rigault-Barbier</h3>
+				<h4>February 4, 2016</h4>
+				<br>
+                <p>
+                    So I started and as I used to do competition, I decided to train for a half marathon. I ran 2 of them and had to stop for my little one. Today is a new part of challenge and hopefully I will go back to running again for the SF half marathon.
+				</p>
+				<br>
+
+                <!-- Reply button & form -->  
+				<div class="post-status-button-div" data-attribute="hidden">
+					<button class="button-reply">Reply</button>
+				</div>
+
+				<form class="hidden reply-form">
+					Reply:<br>
+					<input type="text" name="reply">
+					<input type="radio" name="location" value="location"> Include location<br>
+					<input type="submit" value="Post">
+				</form>
+
+			</div>	
+				<hr>
+                
+<!-- Extra status 6 -->                
+				<div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/018/thumb/10805743_744774678939939_1422144655117219420_n.jpg?1453449746" alt="user electra"/>
+				    <h3>Electra Chong</h3>
+					<h4>February 3, 2016</h4>
+					<br>
+					<p>
+					Secretly running at night. Running was the type of activity I abhorred in high school. Though I admired the discipline and endurance of those who ran, I myself had no will to stomach the side stitches, aching lungs and mild nausea from prolonged running.
+					</p>
+					<br>
+
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+                
+<!-- Extra status 7 --> 
+                <div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/018/thumb/10805743_744774678939939_1422144655117219420_n.jpg?1453449746" alt="user electra"/>
+				    <h3>Electra Chong</h3>
+                    <h4>February 3, 2016</h4>
+					<br>
+<!-- For accessibility, links should have titles and images alt attributes -->	
+					<p>	
+					This changed when I met Siphan and learned about her experience running marathons from her personal website, <a href="http://amsterunner.com/" target="_blank" title="amsterunner website">amsterunner.com</a>. I felt we were similar in spirit, and yet she had managed so much personal growth by pushing herself. After being inspired by her, I secretly started running at night so I limit my embarrassment as a beginner. My night runs were chilly and lonesome, but worth it. NO PAIN, NO GAIN.
+					</p>
+					<br>
+
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+                
+<!-- Extra status 8 -->                
+				<div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/022/thumb/q8XtwJ0q.jpg?1453855437" alt="user marine"/>
+				    <h3>Marine Dejean</h3>
+					<h4>February 2, 2016</h4>
+					<br>
+					<p>
+					Running outdoors. I definitely prefer running outdoors so I can enjoy the nature. I secretly ran the Paris marathon but don't tell anyone.
+					</p>
+					<br>
+
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>		
+
+<!-- Extra status 9 -->                
+				<div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/027/thumb/Screen_Shot_2015-12-03_at_10.31.06_AM.jpg?1452827557" alt="user steven"/>
+				    <h3>Steven Garcia</h3>
+				    <h4>February 1, 2016</h4>
+					<br>
+					<p>
+					Staying fit while preventing injuries. I used to run cross-country races with distances up to 10 miles. Unfortunately, I suffered a knee injury and I've been really careful about my training ever since. I recently picked up running again but have to build up slowly so as to ease the impact on my knees.  
+					</p>
+					<br>
+
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+
+				</div>	
+				<hr>
+
+<!-- Extra status 10 -->                
+				<div class="post">
+					<img class="article_img" src="https://holbertonintranet.s3.amazonaws.com/users/photos/000/000/020/thumb/images.png?1458239784" alt="user rona"/>
+				    <h3>Rona Chong</h3>	
+					<h4>January 22, 2016</h4>
+					<br>
+					<p>
+					I actually don't like running, but my sister has been sneaking out to run at night and as I'm a competitive person this has given me the courage to pick up running too. I just want to be buff.
+					</p>
+					<br>
+                    <br>
+
+                    <!-- Reply button & form -->  
+					<div class="post-status-button-div" data-attribute="hidden">
+						<button class="button-reply">Reply</button>
+					</div>
+
+					<form class="hidden reply-form">
+						Reply:<br>
+						<input type="text" name="reply">
+						<input type="radio" name="location" value="location"> Include location<br>
+						<input type="submit" value="Post">
+					</form>
+					
+				</div>	
+                <hr>	
+			
+		</div>	<!-- End of div id="article-extra-statuses" -->
+    </main>
+
+</div> <!-- End of div id="wrapper" -->
+
+</body>
+
+</html>
+
+
